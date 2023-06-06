@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>PARTE II</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="../index.html">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#animaciones">ANIMACIONES DOM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#eventos">EVENTOS DOM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#EventListener">EVENTLISTENER DOM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#node">NODE DOM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#colecciones">COLECCIONES DOM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#ListaNodos">LISTA DE NODOS DOM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#navegacion">NAVEGACION DOM</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- Animaciones-->
+            <section class="resume-section" id="animaciones">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Animación
+                        <span class="text-primary">DOM</span>
+                    </h1>
+                    <br>
+                    <div class="subheading mb-5">
+                        <div class="animated-box"></div>
+                    </div>
+                    <p class="lead mb-5">Las animaciones DOM se refieren a la capacidad de aplicar efectos de animación a elementos del Document Object Model (DOM) utilizando JavaScript y CSS. Estas animaciones permiten cambiar las propiedades y características visuales de los elementos de una página web de manera dinámica y fluida.</p>
+
+                    <code>var box = document.querySelector('.animated-box');<br>
+                    box.addEventListener('click', function() {<br>
+                      box.style.animationPlayState = 'paused';<br>
+                    });</code>  
+ 
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Eventos-->
+            <section class="resume-section" id="eventos">
+                <div class="">
+                    <h1 class="mb-0">
+                        Eventos
+                        <span class="text-primary">DOM</span>
+                    </h1>
+
+                              <div class="col-lg-5 " >
+               
+                <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#0BC4A3;width:300px;height:20px;padding:40px; ">
+                EVENTO ONMOUSE
+                </div>
+                <script>
+                
+
+                function mOver(obj) {
+                  obj.innerHTML = "Gracias"
+                  obj.style.backgroundColor = "#0BC4A3";
+                }
+                function mOut(obj) {
+                  obj.innerHTML = "Poner el mouse encima"
+                  obj.style.backgroundColor = "#1ec5e5"
+                }
+                </script>
+            </div>
+
+                    <p class="lead mb-5"> Los eventos DOM son acciones o sucesos que ocurren en un documento HTML y que pueden ser detectados y manejados mediante JavaScript. Estos eventos pueden ser desencadenados por la interacción del usuario, como hacer clic en un elemento, mover el ratón sobre un elemento, presionar una tecla en el teclado, etc. Los eventos DOM permiten la interactividad y la capacidad de respuesta en las páginas web, ya que se pueden asociar funciones o scripts a un evento específico y ejecutar acciones en respuesta a dicho evento.</p>
+
+                    <code>
+                     function mOver(obj) {<br>
+                  obj.innerHTML = "Gracias"<br>
+                  obj.style.backgroundColor = "#fffff";<br>
+                }<br>
+                function mOut(obj) {<br>
+                  obj.innerHTML = "Poner el mouse encima"<br>
+                  obj.style.backgroundColor = "#1ec5e5"<br>
+                }<br>
+
+                </code>
+                </div>
+
+            </section>
+            <hr class="m-0" />
+
+
+            <!-- EventListener-->
+            <section class="resume-section" id="EventListener">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Eventlistener
+                        <span class="text-primary">DOM</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        <div class="box2" style="background-color:#0BC4A3;width:300px;height:20px;padding:40px; ">Haz clic</div>
+                    </div>
+                    <p class="lead mb-5">Un EventListener DOM es una función que se adjunta a un elemento HTML para escuchar un determinado evento. Se utiliza para registrar o suscribir una función que se ejecutará cuando ocurra el evento deseado en el elemento seleccionado. Al utilizar un EventListener, podemos detectar y responder a eventos como clics de ratón, cambios de teclado, cambios en el estado de un formulario, desplazamientos de scroll, entre otros. El EventListener se puede agregar a un elemento utilizando el método addEventListener() y proporcionando el tipo de evento a escuchar y la función que se ejecutará cuando ocurra el evento.</p>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Node-->
+            <section class="resume-section" id="node">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Node
+                        <span class="text-primary">DOM</span>
+                    </h1>
+                     <div class="resume-item resume-item pb-0">
+                
+                <div>
+                <p id="p1">Parrafo 1.</p>
+                <p id="p2">Parrafo 2.</p>
+                </div>
+                
+                <button onclick="myFunction()">Eliminar Parrafo 1 </button>
+                
+                  <script>
+                    function myFunction() {
+                      document.getElementById("p1").remove();
+                    }
+                  </script> 
+
+              </div>
+              <br>
+              <div>
+                    <p class="lead mb-5">El DOM (Modelo de Objetos del Documento) es una representación estructurada y jerárquica de un documento HTML/XML que proporciona una interfaz para acceder y manipular los elementos del documento. En el DOM, cada elemento, atributo, texto o cualquier otro componente del documento se considera un "nodo". Los nodos pueden tener relaciones padre/hijo, hermano/hermano o ancestro/descendiente. A través del DOM, podemos crear, modificar o eliminar nodos, así como acceder a sus propiedades y atributos. Los nodos DOM permiten una manipulación dinámica y programática de la estructura del documento HTML, lo que brinda flexibilidad y posibilidades de interacción con JavaScript.</p>
+                    <code>
+                        
+                        function myFunction() {<br>
+                      document.getElementById("p1").remove();<br>
+                    }<br>
+                    </code>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Colecciones-->
+            <section class="resume-section" id="colecciones">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Coleccion
+                        <span class="text-primary">DOM</span>
+                    </h1>
+                     <div class="resume-item resume-item pb-0">
+                
+                <div>
+                <p id="p1">Parrafo 1.</p>
+                
+                </div>
+                
+                <button onclick="Function()">Cambiar a rojo</button>
+
+                <button onclick="Function2()">Cambiar a negro</button>
+
+                <script>
+                function Function() {
+                const myCollection = document.getElementsByTagName("p");
+                for (let i = 0; i < myCollection.length; i++) {
+                myCollection[i].style.color = "red";
+                }
+                }
+
+                function Function2() {
+                const myCollection = document.getElementsByTagName("p");
+                for (let i = 0; i < myCollection.length; i++) {
+                myCollection[i].style.color = "black";
+                }
+                }
+                </script>
+
+              </div>
+              <br>
+              <div>
+                    <p class="lead mb-5">Una colección DOM HTML es una colección de elementos en un documento HTML a los que se puede acceder y manipular usando JavaScript. Las colecciones se pueden crear utilizando el método document.querySelectorAll(), que toma un selector CSS como argumento.</p>
+                    <code>
+                        
+                       function Function() {<br>
+                const myCollection = document.getElementsByTagName("p");<br>
+                for (let i = 0; i < myCollection.length; i++) {<br>
+                myCollection[i].style.color = "red";<br>
+                }
+                }
+                    </code>
+                </div>
+            </section>
+
+
+<!-- Lista de Nodos -->
+            <section class="resume-section" id="ListaNodos">
+                 <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Lista de Nodos
+                        <span class="text-primary">DOM</span>
+                    </h1>
+                     
+              <br>
+
+
+
+              <div>
+                    <p class="lead mb-5">Una lista de nodos y una colección de HTML son prácticamente lo mismo. Ambos son colecciones tipo matriz (listas) de nodos (elementos) extraídos de un documento. Se puede acceder a los nodos por números de índice. El índice comienza en 0. Ambos tienen una propiedad de longitud que devuelve el número de elementos de la lista (colección). Una HTMLCollection es una colección de elementos de documento.Una lista de nodos es una colección de nodos de documentos (nodos de elementos, nodos de atributos y nodos de texto). Se puede acceder a los elementos de HTMLCollection por su nombre, identificación o número de índice. 
+                        <br>Solo se puede acceder a los elementos de NodeList por su número de índice. Una HTMLCollection es siempre una colección en vivo. Ejemplo: si agrega un elemento li a una lista en el DOM, la lista en HTMLCollection también cambiará.
+                    <br>Una NodeList suele ser una colección estática. Ejemplo: si agrega un elemento li a una lista en el DOM, la lista en NodeList no cambiará.
+                    <br>Los métodos getElementsByClassName() y getElementsByTagName() devuelven una HTMLCollection activa.
+                    <br>El querySelectorAll() método devuelve una lista de nodos estática. La childNodes propiedad devuelve una lista de nodos activa.</p>
+
+                    <br>
+                    <div class="resume-item resume-item pb-0">
+                
+               <p id="demo"></p>
+
+                <script>
+                const myNodelist = document.querySelectorAll("p");
+                document.getElementById("demo").innerHTML = "Esta Documento tiene " + myNodelist.length + " parrafos.";
+                </script>
+
+              </div>
+                    <code>
+                      const myNodelist = document.querySelectorAll("p");<br>
+                document.getElementById("demo").innerHTML = "Esta Documento tiene " + myNodelist.length + " parrafos.";
+                    </code>
+                </div>
+            </section>
+
+        <!-- Navegacion -->
+            <section class="resume-section" id="navegacion">
+                 <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Navegación
+                        <span class="text-primary">DOM</span>
+                    </h1>
+                     
+              <br>
+
+
+
+              <div>
+                    <p class="lead mb-5">Navegación DOM HTML es una técnica para navegar a través del Modelo de objetos de documento (DOM) de un documento HTML utilizando JavaScript. El DOM es una estructura en forma de árbol que representa los elementos de un documento HTML. Navegación DOM HTML le permite acceder y manipular elementos en el árbol DOM. 
+                        <br>Hay varias formas de navegar por el árbol DOM usando JavaScript. Una forma común es usar el método document.querySelector() para seleccionar un elemento por su selector CSS. Una vez que haya seleccionado un elemento, puede acceder a sus propiedades y métodos para manipularlo.</p>
+
+                    <br>
+                    <div class="resume-item resume-item pb-0">
+                
+
+                
+              </div>
+                    <code>
+                      document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+                    </code>
+                </div>
+            </section>
+
+
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
